@@ -1,0 +1,48 @@
+.LandingPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LandingPage_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.LandingPage_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LandingPage_label {
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.LandingPage_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.copylink {
+    margin-top: 5px;
+}
+
+#listname {
+    width: 200px;
+}
+
+#listname_submit {
+    width: 208px;
+    margin-top: 5px;
+}
+
+
+
+
