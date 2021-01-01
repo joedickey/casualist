@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import {Route} from 'react-router-dom'
 import './CreateItemView.css';
+import Header from '../Header/Header'
 
 class CreateItemView extends Component {
 
   render() {
     return (
-      <div className='CreateItemView'>
-
-      </div>
+      <>
+        <Header view='create' />
+        <div className='CreateItemView'>
+            <div className='view_container'>
+              Create Item View
+            </div>
+        </div>
+      </>
     )
   }
 }

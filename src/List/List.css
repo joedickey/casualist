@@ -1,0 +1,24 @@
+.List {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: lightgray;
+    width: 300px;
+    border: 1px solid black;
+    padding-bottom: 18.7px;
+  }
+
+.List_ul {
+      padding: 0px;
+  }
+
+.router_link:link {
+    color: black;
+    text-decoration: none;
+}
+
+.router_link:visited {
+    color: black;
+    text-decoration: none;
+}

@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import {Route} from 'react-router-dom'
 import './ListView.css';
 import Header from '../Header/Header'
+import List from '../List/List'
 
 class ListView extends Component {
 
   render() {
     return (
-      <div className='ListView'>
-          <Header />
-          <div className='view_container'>
-          ListView
-          </div>
-      </div>
+      <>
+        <Header view='list' />
+        <div className='ListView'>
+            <div className='view_container'>
+              <List />
+            </div>
+        </div>
+      </>
     )
   }
 }

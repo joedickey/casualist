@@ -18,7 +18,7 @@ class LandingPage extends Component {
                   <input type='text' name='listname' id='listname' className='LandingPage_listname' placeholder='Enter new list title.'/>
                   <button type='submit' id='listname_submit'>Create List</button>
               </form>
-              <div className='LandingPage_link hidden'>
+              <div className='LandingPage_link'> {/* add conditional 'hidden' class */}
                 <a href='http://localhost:3000/fgxbEp'>http://localhost:3000/fgxbEp</a>
                 <button className='copylink'>Copy Link</button>
               </div>

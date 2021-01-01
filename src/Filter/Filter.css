@@ -2,6 +2,11 @@
     font-size: smaller;
 }
 
+.Filter_empty {
+    font-size: smaller;
+    opacity: 0;
+}
+
 #Filter_label {
     margin-right: 5px;
 }
