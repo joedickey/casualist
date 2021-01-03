@@ -18,7 +18,7 @@ class LandingPage extends Component {
                   <button type='submit' id='listname_submit'>Create List</button>
               </form>
               <div className='LandingPage_link'> {/* add conditional 'hidden' class */}
-                <a href='http://localhost:3000/fgxbEp'>http://localhost:3000/fgxbEp</a>
+                <a href='https://casualist.vercel.app/fgxbEp'>https://casualist.vercel.app/fgxbEp</a>
                 <button className='copylink'>Copy Link</button>
               </div>
           </div>
