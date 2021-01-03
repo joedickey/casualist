@@ -5,6 +5,7 @@ import LandingPage from './LandingPage/LandingPage';
 import ListView from './ListView/ListView'
 import ItemDetailView from './ItemDetailView/ItemDetailView'
 import CreateItemView from './CreateItemView/CreateItemView';
+import EditItemView from './EditItemView/EditItemView'
 
 class App extends Component {
 
@@ -27,6 +28,10 @@ class App extends Component {
           exact
           path={'/:list_id/add-item/'}
           component={CreateItemView}/>
+          <Route
+          exact
+          path={'/:list_id/edit/:item_id'}
+          component={EditItemView}/>
       </main>
     )
   }

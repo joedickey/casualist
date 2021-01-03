@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import './ItemDetail.css';
-import Item from '../Item/Item'
 
 class ItemDetail extends Component {
 
@@ -22,9 +21,15 @@ class ItemDetail extends Component {
               </div>
               <div className='ItemDetail_right'>
                 <button className='ItemDetail_button'>Delete</button>
-                <button className='ItemDetail_button'>Edit</button>
                 <button className='ItemDetail_button'>
-                  <Link className='router_link' to={'/fgxbEp'}>Back</Link>
+                  <Link className='router_link' to={`/fgxbEp/edit/${this.props.id}`}>
+                    Edit
+                  </Link>
+                </button>
+                <button className='ItemDetail_button'>
+                  <Link className='router_link' to={'/fgxbEp'}>
+                    Back
+                  </Link>
                 </button>
               </div>
             </div>

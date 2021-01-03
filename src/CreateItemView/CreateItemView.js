@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './CreateItemView.css';
 import Header from '../Header/Header'
+import CreateItem from '../CreateItem/CreateItem'
 
 class CreateItemView extends Component {
 
@@ -10,7 +11,7 @@ class CreateItemView extends Component {
         <Header view='create' />
         <div className='CreateItemView'>
             <div className='view_container'>
-              Create Item View
+              <CreateItem />
             </div>
         </div>
       </>

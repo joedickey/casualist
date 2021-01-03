@@ -1,4 +1,4 @@
-.CreateItem {
+.EditItem {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,7 @@
     padding-bottom: 18.7px;
   }
 
-.CreateItem_form {
+.EditItem_form {
     background-color: white;
     padding: 0px 5px;
     border: 1px solid black;
@@ -21,19 +21,25 @@
     text-decoration: none;
   }
 
-.CreateItem_bottom {
+.EditItem_bottom {
     display: flex;
     justify-content: center;
     margin: 10px 0px;
 }
 
-.CreateItem_button {
+.EditItem_button {
     margin: 5px;
   }
 
-.CreateItem_label {
+.EditItem_label {
     margin: 5px 0px;
 }
+
+.EditItem_status {
+    display: flex;
+    align-items: flex-start;
+    margin: 16px 0px;
+  }
 
 #form_notes {
     height: 75px;

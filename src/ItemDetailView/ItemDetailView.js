@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Route} from 'react-router-dom'
 import './ItemDetailView.css';
 import Header from '../Header/Header'
 import ItemDetail from '../ItemDetail/ItemDetail'
