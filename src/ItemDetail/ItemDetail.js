@@ -33,7 +33,7 @@ class ItemDetail extends Component {
                 </button>
               </div>
             </div>
-            <div class='ItemDetail_bottom'>
+            <div className='ItemDetail_bottom'>
               <p>Notes:</p>
               <p>{this.props.notes}</p>
             </div>

@@ -8,17 +8,17 @@ class EditItem extends Component {
     return (
       <div className='EditItem'>
         <form className='EditItem_form'>
-          <label for='form_name' class='EditItem_label'>Name:</label>
-          <input id='form_name' name='form_name' class='EditItem_input' type='text' value={this.props.item_name}></input>
-          <label for='form_assign' class='EditItem_label'>Assigned To:</label>
-          <input id='form_assign' name='form_assign' class='EditItem_input' type='text' value={this.props.assigned}></input>
+          <label htmlFor='form_name' className='EditItem_label'>Name:</label>
+          <input id='form_name' name='form_name' className='EditItem_input' type='text' defaultValue={this.props.item_name}></input>
+          <label htmlFor='form_assign' className='EditItem_label'>Assigned To:</label>
+          <input id='form_assign' name='form_assign' className='EditItem_input' type='text' defaultValue={this.props.assigned}></input>
           <div className='EditItem_status'>
             <span className={`Item_stat_tog ${this.props.status === 'todo' ? 'Item_todo' : ''}`}>To Do</span>
             <span className={`Item_stat_tog ${this.props.status === 'doing' ? 'Item_doing' : ''}`}>Doing</span>
             <span className={`Item_stat_tog ${this.props.status === 'done' ? 'Item_done' : ''}`}>Done</span>
           </div>
-          <label for='form_notes' class='EditItem_label'>Notes:</label>
-          <textarea id='form_notes' name='form_notes' class='EditItem_input' type='text' value={this.props.notes}></textarea>
+          <label htmlFor='form_notes' className='EditItem_label'>Notes:</label>
+          <textarea id='form_notes' name='form_notes' className='EditItem_input' type='text' defaultValue={this.props.notes}></textarea>
           <div className='EditItem_bottom'>
             <button  type='submit' className='EditItem_button'>
               <Link className='router_link' to={`/fgxbEp`}>

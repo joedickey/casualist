@@ -8,12 +8,12 @@ class CreateItem extends Component {
     return (
       <div className='CreateItem'>
         <form className='CreateItem_form'>
-          <label for='form_name' class='CreateItem_label'>Name:</label>
-          <input id='form_name' name='form_name' class='CreateItem_input' type='text' placeholder=''></input>
-          <label for='form_assign' class='CreateItem_label'>Assigned To:</label>
-          <input id='form_assign' name='form_assign' class='CreateItem_input' type='text' placeholder=''></input>
-          <label for='form_notes' class='CreateItem_label'>Notes:</label>
-          <textarea id='form_notes' name='form_notes' class='createitem_input' type='text' placeholder=''></textarea>
+          <label htmlFor='form_name' className='CreateItem_label'>Name:</label>
+          <input id='form_name' name='form_name' className='CreateItem_input' type='text' placeholder=''></input>
+          <label htmlFor='form_assign' className='CreateItem_label'>Assigned To:</label>
+          <input id='form_assign' name='form_assign' className='CreateItem_input' type='text' placeholder=''></input>
+          <label htmlFor='form_notes' className='CreateItem_label'>Notes:</label>
+          <textarea id='form_notes' name='form_notes' className='createitem_input' type='text' placeholder=''></textarea>
           <div className='CreateItem_bottom'>
             <button  type='submit' className='CreateItem_button'>
               <Link className='router_link' to={`/fgxbEp`}>

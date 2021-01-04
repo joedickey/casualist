@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import CasualistContext from '../CasualistContext'
 import {Link} from 'react-router-dom'
 import './List.css';
 import Item from '../Item/Item'
-import Mock from '../mock.js'
 
 class List extends Component {
+  static contextType = CasualistContext
 
   render() {
-    const items = Mock.mockitems.map(item => {
-      return <Item key={item.item_id} id={item.item_id} item_name={item.item_name} assigned={item.item_assign} status={item.item_status}/>
+    const items = this.context.displayItems.map(item => {
+      return <Item key={item.id} id={item.id} item_name={item.name} assigned={item.assign} status={item.status}/>
     }) 
     return (
       <div className='List'>
-        <h3>My List</h3> {/* Replace 'title' const from data */}
+        <h3>{this.context.list.name}</h3>
+        <button>Edit List Name</button>
         <ul className='List_ul'>
           {items}
         </ul>

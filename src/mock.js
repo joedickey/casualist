@@ -1,31 +1,43 @@
-export default {
-
+const Mock = {
    'mocklist': {
         'name': 'My List',
-        'list_id': 'fgxbEp'
+        'id': 'fgxbEp'
     }
 ,
     'mockitems': [
         {
-            'item_id': '1',
-            'item_name': 'Item 1',
-           'item_assign': 'Me',
-            'item_status': 'todo',
-            'item_notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
+            'id': '1',
+            'list_id': 'fgxbEp',
+            'name': 'Item 1',
+            'assign': 'Me',
+            'status': 'todo',
+            'notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
         },
         {
-            'item_id': '2',
-            'item_name': 'Item 2',
-           'item_assign': 'Me',
-            'item_status': 'doing',
-            'item_notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
+            'id': '2',
+            'list_id': 'fgxbEp',
+            'name': 'Item 2',
+            'assign': 'Me',
+            'status': 'doing',
+            'notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
         },
         {
-            'item_id': '3',
-            'item_name': 'Item 3',
-           'item_assign': 'You',
-            'item_status': 'done',
-            'item_notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
+            'id': '3',
+            'list_id': 'fgxbEp',
+            'name': 'Item 3',
+            'assign': 'You',
+            'status': 'done',
+            'notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
+        },
+        {
+            'id': '4',
+            'list_id': 'fgxbEp',
+            'name': 'Item 4',
+            'assign': '',
+            'status': 'todo',
+            'notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
         },
     ]
 }
+
+export default Mock;
