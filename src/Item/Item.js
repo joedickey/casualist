@@ -1,34 +1,43 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
+import CasualistContext from '../CasualistContext';
 import './Item.css';
+import StatusBar from '../StatusBar/StatusBar'
 
 class Item extends Component {
+  static contextType = CasualistContext
+
+  handleClick = (id, callback) => {
+    callback(id)
+  }
 
   render() {
     return (
       <div className='Item'>
-        <div className='Item_left'>
-          <h4>{this.props.item_name}</h4>
-          <p className={`${this.props.assigned ? '' : 'hidden'}`}>Assigned to: {this.props.assigned}</p>
-          <div className='Item_status'>
-            <span className={`Item_stat_tog ${this.props.status === 'todo' ? 'Item_todo' : ''}`}>To Do</span>
-            <span className={`Item_stat_tog ${this.props.status === 'doing' ? 'Item_doing' : ''}`}>Doing</span>
-            <span className={`Item_stat_tog ${this.props.status === 'done' ? 'Item_done' : ''}`}>Done</span>
-          </div>
-        </div>
-        <div className='Item_right'>
-          <button className='Item_button'>Delete</button>
-          <button className='Item_button'>
-            <Link className='router_link' to={`/fgxbEp/edit/${this.props.id}`}>
-              Edit
-            </Link>
-          </button>
-          <button className='Item_button'>
-            <Link className='router_link' to={`/fgxbEp/detail/${this.props.id}`}>
-              Details
-            </Link>
-          </button>
-        </div>
+        <CasualistContext.Consumer>
+          {({updateCurrItem}) => (
+            <>
+            <div className='Item_left'>
+              <h4>{this.props.item_name}</h4>
+              <p className={`${this.props.assigned ? '' : 'hidden'}`}>Assigned to: {this.props.assigned}</p>
+              <StatusBar status={this.props.status}/>             
+            </div>
+            <div className='Item_right'>
+              <button className='Item_button'>Delete</button>
+              <button className='Item_button' onClick={() => this.handleClick(this.props.id, updateCurrItem)}>
+                <Link className='router_link' to={`/fgxbEp/edit/${this.props.id}`}>
+                  Edit
+                </Link>
+              </button>
+              <button className='Item_button' onClick={() => this.handleClick(this.props.id, updateCurrItem)}>
+                <Link className='router_link' to={`/fgxbEp/detail/${this.props.id}`}>
+                  Details
+                </Link>
+              </button>
+            </div>
+            </>
+          )}
+        </CasualistContext.Consumer>
       </div>
     )
   }

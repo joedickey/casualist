@@ -7,6 +7,20 @@ import CasualistContext from '../CasualistContext';
 class Header extends Component {
   static contextType = CasualistContext
 
+  constructor(props) {
+    super(props)
+
+    this.linkRef = React.createRef()
+  }
+
+  copyLink = (e) => {
+    this.linkRef.current.type = 'text'
+    this.linkRef.current.focus()
+    this.linkRef.current.select()
+    document.execCommand('copy')
+    this.linkRef.current.type = 'hidden'
+  }
+
   render() {
 
     return (
@@ -20,7 +34,8 @@ class Header extends Component {
             <Filter />
             <div className='Header_link'>
               <a href={`http://localhost:3000/${this.context.list.id}`}>http://localhost:3000/{this.context.list.id}</a>
-              <button className='copylink'>Copy Link</button>
+              <button className='copylink' onClick={() => this.copyLink()}>Copy Link</button>
+              <input ref={this.linkRef} type='hidden' value={`http://localhost:3000/${this.context.list.id}`} readOnly></input>
             </div>
         </div>
       </div>

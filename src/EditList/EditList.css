@@ -1,4 +1,4 @@
-.ItemDetail {
+.EditList {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,52 +6,44 @@
     background-color: lightgray;
     width: 300px;
     border: 1px solid black;
+    padding-bottom: 18.7px;
   }
 
-.ItemDetail_ul {
-      padding: 0px;
-  }
-
-.ItemDetail_item {
+.EditList_form {
     background-color: white;
     padding: 0px 5px;
     border: 1px solid black;
     width: 270px;
-    margin-bottom: 10px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     color: black;
     text-decoration: none;
   }
 
-.ItemDetail_top {
+.EditList_top {
     display: flex;
-    justify-content: space-between;
-}
-  
-.ItemDetail_right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-  }
+    margin-top: 10px;
+}
 
-.ItemDetail_bottom {
-    align-self: flex-start;
-  }
-  
-.ItemDetail_button {
+.EditList_bottom {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.EditList_button {
     margin: 5px;
   }
 
-.ItemDetail_todo {
-    background-color: red;
+.EditList_label {
+    margin: 5px 0px;
 }
 
-.ItemDetail_doing {
-    background-color: yellow;
-}
-
-.ItemDetail_done {
-    background-color: green;
+.EditList_input {
+    width: 150px;
+    margin-left: 5px;
+    margin-top: 2.5px;
 }

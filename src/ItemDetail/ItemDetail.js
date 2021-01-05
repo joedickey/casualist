@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
+import CasualistContext from '../CasualistContext';
 import './ItemDetail.css';
+import StatusBar from '../StatusBar/StatusBar'
 
 class ItemDetail extends Component {
+  static contextType = CasualistContext
 
   render() {
+    const currentItem = this.context.currentItem[0]
+
     return (
       <div className='ItemDetail'>
         <ul className='ItemDetail_ul'> 
           <div className='ItemDetail_item'>
             <div className='ItemDetail_top'>
               <div className='ItemDetail_left'>
-                <h4>{this.props.item_name}</h4>
-                <p className={`${this.props.assigned ? '' : 'hidden'}`}>Assigned to: {this.props.assigned}</p>
-                <div className='ItemDetail_status'>
-                  <span className={`ItemDetail_stat_tog ${this.props.status === 'todo' ? 'Item_todo' : ''}`}>To Do</span>
-                  <span className={`ItemDetail_stat_tog ${this.props.status === 'doing' ? 'Item_doing' : ''}`}>Doing</span>
-                  <span className={`ItemDetail_stat_tog ${this.props.status === 'done' ? 'Item_done' : ''}`}>Done</span>
-                </div>
+                <h4>{currentItem.name}</h4>
+                <p className={`${currentItem.assign ? '' : 'hidden'}`}>Assigned to: {currentItem.assign}</p>
+                <StatusBar status={currentItem.status}/> 
               </div>
               <div className='ItemDetail_right'>
                 <button className='ItemDetail_button'>Delete</button>
                 <button className='ItemDetail_button'>
-                  <Link className='router_link' to={`/fgxbEp/edit/${this.props.id}`}>
+                  <Link className='router_link' to={`/fgxbEp/edit/${currentItem.id}`}>
                     Edit
                   </Link>
                 </button>
@@ -35,7 +36,7 @@ class ItemDetail extends Component {
             </div>
             <div className='ItemDetail_bottom'>
               <p>Notes:</p>
-              <p>{this.props.notes}</p>
+              <p>{currentItem.notes}</p>
             </div>
         </div>
         </ul>

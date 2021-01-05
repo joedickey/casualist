@@ -23,9 +23,11 @@ class LandingPage extends Component {
   }
 
   copyLink = (e) => {
-    console.log(this.linkRef.current)
+    this.linkRef.current.type = 'text'
+    this.linkRef.current.focus()
     this.linkRef.current.select()
     document.execCommand('copy')
+    this.linkRef.current.type = 'hidden'
   }
 
   render() {
@@ -43,9 +45,9 @@ class LandingPage extends Component {
                   <button type='submit' id='listname_submit'>Create List</button>
               </form>
               <div className={`LandingPage_link ${this.state.linkHidden ? 'hidden' : ''}`}> 
-                <a  href={`http://localhost:3000/${this.context.list.id}`}>http://localhost:3000/{this.context.list.id}</a>
+                <a ref={this.linkRef} href={`http://localhost:3000/${this.context.list.id}`}>http://localhost:3000/{this.context.list.id}</a>
                 <button className='copylink' onClick={() => this.copyLink()}>Copy Link</button>
-                <textarea ref={this.linkRef} className='hidden' value={`http://localhost:3000/${this.context.list.id}`} readOnly></textarea>
+                <input ref={this.linkRef} type='hidden' value={`http://localhost:3000/${this.context.list.id}`} readOnly></input>
               </div>
           </div>
       </div>

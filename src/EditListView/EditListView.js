@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import './EditItemView.css';
+import './EditListView.css';
 import Header from '../Header/Header'
-import EditItem from '../EditItem/EditItem'
+import EditList from '../EditList/EditList'
 
-class EditItemView extends Component {
+class EditListView extends Component {
 
   render() {
     return (
       <>
         <Header view='edit' />
-        <div className='EditItemView'>
+        <div className='EditListView'>
             <div className='view_container'>
-              <EditItem />
+              <EditList />
             </div>
         </div>
       </>
@@ -20,4 +20,4 @@ class EditItemView extends Component {
 }
 
 
-export default EditItemView;
+export default EditListView;

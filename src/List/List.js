@@ -14,7 +14,11 @@ class List extends Component {
     return (
       <div className='List'>
         <h3>{this.context.list.name}</h3>
-        <button>Edit List Name</button>
+        <button>
+        <Link className='router_link' to='/edit/fgxbEp'>
+            Edit List Name
+          </Link>
+        </button>
         <ul className='List_ul'>
           {items}
         </ul>

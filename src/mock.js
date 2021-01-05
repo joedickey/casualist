@@ -8,34 +8,34 @@ const Mock = {
         {
             'id': '1',
             'list_id': 'fgxbEp',
-            'name': 'Item 1',
+            'name': 'Wash the car',
             'assign': 'Me',
             'status': 'todo',
-            'notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
+            'notes': 'Use soap and water.'
         },
         {
             'id': '2',
             'list_id': 'fgxbEp',
-            'name': 'Item 2',
+            'name': 'Vacuum the house',
             'assign': 'Me',
             'status': 'doing',
-            'notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
+            'notes': 'Do not miss any spots!'
         },
         {
             'id': '3',
             'list_id': 'fgxbEp',
-            'name': 'Item 3',
+            'name': 'Walk the dog',
             'assign': 'You',
             'status': 'done',
-            'notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
+            'notes': 'This is very important. Make sure it gets done.'
         },
         {
             'id': '4',
             'list_id': 'fgxbEp',
-            'name': 'Item 4',
+            'name': 'Set the alarm',
             'assign': '',
             'status': 'todo',
-            'notes': 'These are my notes. These are my notes. These are my notes. These are my notes.'
+            'notes': 'Alarm code is: 55676'
         },
     ]
 }

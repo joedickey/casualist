@@ -7,6 +7,7 @@ import ListView from './ListView/ListView'
 import ItemDetailView from './ItemDetailView/ItemDetailView'
 import CreateItemView from './CreateItemView/CreateItemView';
 import EditItemView from './EditItemView/EditItemView'
+import EditListView from './EditListView/EditListView'
 import Mock from './mock.js'
 
 class App extends Component {
@@ -43,6 +44,14 @@ class App extends Component {
     }
   }
 
+  updateCurrItem = (id) => {
+    const currentItem = this.state.allItems.filter(item => item.id === id.toString())
+    
+    this.setState({
+      currentItem: currentItem
+    })
+  }
+
   render() {
     const contextValue = {
       list: this.state.list,
@@ -50,7 +59,8 @@ class App extends Component {
       displayItems: this.state.displayItems,
       currentItem: this.state.currentItem,
       view: this.state.view,
-      filterItems: this.filterItems
+      filterItems: this.filterItems,
+      updateCurrItem: this.updateCurrItem
     }
 
     return (
@@ -76,6 +86,10 @@ class App extends Component {
             exact
             path={'/:list_id/edit/:item_id'}
             component={EditItemView}/>
+          <Route
+            exact
+            path={'/edit/:list_id'}
+            component={EditListView}/>
         </CasualistContext.Provider>
       </main>
     )

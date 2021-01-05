@@ -35,12 +35,6 @@
     margin: 5px 0px;
 }
 
-.EditItem_status {
-    display: flex;
-    align-items: flex-start;
-    margin: 16px 0px;
-  }
-
 #form_notes {
     height: 75px;
 }

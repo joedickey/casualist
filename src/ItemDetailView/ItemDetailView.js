@@ -11,7 +11,7 @@ class ItemDetailView extends Component {
         <Header view='detail' />
         <div className='ItemDetailView'>
             <div className='view_container'>
-              <ItemDetail key='' id='1' item_name='Item 1' assigned='Me' status='todo' notes='These are my notes. These are my notes. These are my notes. These are my notes.' />
+              <ItemDetail />
             </div>
         </div>
       </>
