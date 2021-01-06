@@ -4,10 +4,6 @@ import './App.css';
 import CasualistContext from './CasualistContext'
 import LandingPage from './LandingPage/LandingPage';
 import ListView from './ListView/ListView'
-import ItemDetailView from './ItemDetailView/ItemDetailView'
-import CreateItemView from './CreateItemView/CreateItemView';
-import EditItemView from './EditItemView/EditItemView'
-import EditListView from './EditListView/EditListView'
 import Mock from './mock.js'
 
 class App extends Component {
@@ -74,22 +70,6 @@ class App extends Component {
             exact
             path={'/:list_id'}
             component={ListView}/>
-          <Route
-            exact
-            path={'/:list_id/detail/:item_id'}
-            component={ItemDetailView}/>
-          <Route
-            exact
-            path={'/:list_id/add-item/'}
-            component={CreateItemView}/>
-          <Route
-            exact
-            path={'/:list_id/edit/:item_id'}
-            component={EditItemView}/>
-          <Route
-            exact
-            path={'/edit/:list_id'}
-            component={EditListView}/>
         </CasualistContext.Provider>
       </main>
     )

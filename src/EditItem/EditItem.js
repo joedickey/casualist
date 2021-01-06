@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
 import CasualistContext from '../CasualistContext';
 import './EditItem.css';
 import StatusBar from '../StatusBar/StatusBar'
@@ -22,14 +21,10 @@ class EditItem extends Component {
           <textarea id='form_notes' name='form_notes' className='EditItem_input' type='text' defaultValue={currentItem.notes}></textarea>
           <div className='EditItem_bottom'>
             <button  type='submit' className='EditItem_button'>
-              <Link className='router_link' to={`/fgxbEp`}>
-                Submit
-              </Link>
+              Submit
             </button>
             <button className='EditItem_button'>
-              <Link className='router_link' to={`/fgxbEp`}>
-                Cancel
-              </Link>
+              Cancel
             </button>
           </div>
         </form>

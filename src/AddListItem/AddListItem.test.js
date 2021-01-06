@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import EditListView from './EditListView';
+import AddListItem from './AddListItem';
 
 
 
@@ -12,7 +12,7 @@ it('renders without crashing', () => {
 
     ReactDOM.render(
     <Router>
-        <EditListView />
+        <AddListItem />
     </Router>, div);
     
     ReactDOM.unmountComponentAtNode(div);

@@ -1,4 +1,4 @@
-.CreateItem {
+.AddListItem {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,8 +8,8 @@
     border: 1px solid black;
     padding-bottom: 18.7px;
   }
-
-.CreateItem_form {
+  
+  .AddListItem_form {
     background-color: white;
     padding: 0px 5px;
     border: 1px solid black;
@@ -20,22 +20,23 @@
     color: black;
     text-decoration: none;
   }
-
-.CreateItem_bottom {
+  
+  .AddListItem_bottom {
     display: flex;
     justify-content: center;
     margin: 10px 0px;
-}
-
-.CreateItem_button {
+  }
+  
+  .AddListItem_button {
     margin: 5px;
   }
-
-.CreateItem_label {
+  
+  .AddListItem_label {
     margin: 5px 0px;
-}
-
-#form_notes {
+  }
+  
+  #form_notes {
     height: 75px;
-}
-
+  }
+  
+  

@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
 import CasualistContext from '../CasualistContext';
 import './ItemDetail.css';
 import StatusBar from '../StatusBar/StatusBar'
 
 class ItemDetail extends Component {
   static contextType = CasualistContext
+
+  handleClick = () => {
+    this.props.toggleEditItemModal()
+    this.props.toggleItemDetailModal()
+
+  }
 
   render() {
     const currentItem = this.context.currentItem[0]
@@ -22,15 +27,11 @@ class ItemDetail extends Component {
               </div>
               <div className='ItemDetail_right'>
                 <button className='ItemDetail_button'>Delete</button>
-                <button className='ItemDetail_button'>
-                  <Link className='router_link' to={`/fgxbEp/edit/${currentItem.id}`}>
-                    Edit
-                  </Link>
+                <button className='ItemDetail_button' onClick={() => this.handleClick()}>
+                  Edit
                 </button>
-                <button className='ItemDetail_button'>
-                  <Link className='router_link' to={'/fgxbEp'}>
-                    Back
-                  </Link>
+                <button className='ItemDetail_button' onClick={() => this.props.toggleItemDetailModal()}>
+                  Back
                 </button>
               </div>
             </div>
