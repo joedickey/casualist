@@ -4,9 +4,10 @@ const CasualistContext = React.createContext({
     list: {},
     items: [],
     currentItem: {},
-    view: '',
+    displayItems: [],
     filterItems: () => {},
-    updateCurrItem: () => {}
+    updateCurrItem: () => {},
+    updateDisplayItemsOrder: () => {}
 })
 
 export default CasualistContext;

@@ -21,12 +21,12 @@ class Filter extends Component {
     })
 
     return (
-      <div className={`Filter ${this.context.view === 'list' ? '' : 'Filter_empty'}`}>
+      <div className='Filter'>
         <CasualistContext.Consumer>
           {({filterItems}) => (
             <>
             <label htmlFor='Filter_select' id='Filter_label'>Filter:</label>
-            <select name='Filter_select' id='Filter_select' disabled={this.context.view === 'list' ? false : true } onChange={(e) => this.handleChange(e, filterItems)}>
+            <select name='Filter_select' id='Filter_select' onChange={(e) => this.handleChange(e, filterItems)}>
               <option value='all'>All</option>
               <option value='todo'>Status: To Do</option>
               <option value='doing'>Status: Doing</option>

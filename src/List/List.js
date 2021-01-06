@@ -16,7 +16,8 @@ class List extends Component {
     editListModalIsOpen: false,
     addListItemModalIsOpen: false,
     itemDetailModalIsOpen: false,
-    editItemModalIsOpen: false
+    editItemModalIsOpen: false,
+    listOrder: this.context.displayItems //maybe have to move to context?
   }
 
   toggleEditListModal = () => {
@@ -41,6 +42,10 @@ class List extends Component {
     this.setState({
       editItemModalIsOpen: !this.state.editItemModalIsOpen
     })
+  }
+
+  handleOnDragEnd = (result, callback) => {
+    callback(result)
   }
   
   componentDidMount() {
@@ -77,16 +82,20 @@ class List extends Component {
         <button onClick={() => this.toggleEditListModal()}>
           Edit List Name
         </button>
-        <DragDropContext>
-          <Droppable droppableId={this.context.list.id}>
-            {(provided) => (
-              <ul className='List_ul' {...provided.droppableProps} ref={provided.innerRef}>
-                {items}
-                {provided.placeholder}
-              </ul>
-            )}
-          </Droppable>
-        </DragDropContext>
+        <CasualistContext.Consumer>
+          {({updateDisplayItemsOrder}) => (
+            <DragDropContext onDragEnd={(result) => this.handleOnDragEnd(result, updateDisplayItemsOrder)}>
+              <Droppable droppableId={this.context.list.id}>
+                {(provided) => (
+                  <ul className='List_ul' {...provided.droppableProps} ref={provided.innerRef}>
+                    {items}
+                    {provided.placeholder}
+                  </ul>
+                )}
+              </Droppable>
+            </DragDropContext>
+          )}
+        </CasualistContext.Consumer>
         <button onClick={() => this.toggleAddListItemModal()}>
           + Add List Item
         </button>
@@ -121,8 +130,6 @@ class List extends Component {
           <AddListItem />
         </Modal>
       </div>
-
-      
     )
   }
 }

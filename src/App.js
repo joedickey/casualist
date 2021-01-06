@@ -14,7 +14,6 @@ class App extends Component {
     allItems: Mock.mockitems,
     displayItems: Mock.mockitems,
     currentItem: {},
-    view: 'list'
   }
 
   filterItems = (val) => {
@@ -48,15 +47,26 @@ class App extends Component {
     })
   }
 
+  updateDisplayItemsOrder = (result) => {
+    if (!result.destination) return;
+    const items = Array.from(this.state.displayItems)
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem)
+
+    this.setState({
+      displayItems: items
+    })
+  }
+
   render() {
     const contextValue = {
       list: this.state.list,
       allItems: this.state.allItems,
       displayItems: this.state.displayItems,
       currentItem: this.state.currentItem,
-      view: this.state.view,
       filterItems: this.filterItems,
-      updateCurrItem: this.updateCurrItem
+      updateCurrItem: this.updateCurrItem,
+      updateDisplayItemsOrder: this.updateDisplayItemsOrder
     }
 
     return (

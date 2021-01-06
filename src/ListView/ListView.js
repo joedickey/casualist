@@ -8,7 +8,7 @@ class ListView extends Component {
   render() {
     return (
       <>
-        <Header view='list' />
+        <Header />
         <div className='ListView'>
             <div className='view_container'>
               <List />
