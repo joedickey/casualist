@@ -7,7 +7,8 @@ const CasualistContext = React.createContext({
     displayItems: [],
     filterItems: () => {},
     updateCurrItem: () => {},
-    updateDisplayItemsOrder: () => {}
+    updateDisplayItemsOrder: () => {},
+    updateFilter: () => {}
 })
 
 export default CasualistContext;

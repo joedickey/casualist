@@ -1,7 +1,9 @@
 const Mock = {
    'mocklist': {
+        'id': 'fgxbEp',
         'name': 'My List',
-        'id': 'fgxbEp'
+        'item_order': ['1', '2', '3', '4']
+        
     }
 ,
     'mockitems': [

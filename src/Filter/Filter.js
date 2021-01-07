@@ -5,9 +5,10 @@ import './Filter.css';
 class Filter extends Component {
   static contextType = CasualistContext
 
-  handleChange = (e, callback) => {
+  handleChange = (e, filterItems, updateFilter) => {
     const filterVal = e.target.value
-    callback(filterVal)
+    updateFilter(filterVal)
+    filterItems(filterVal)
   }
 
   render() {
@@ -23,10 +24,10 @@ class Filter extends Component {
     return (
       <div className='Filter'>
         <CasualistContext.Consumer>
-          {({filterItems}) => (
+          {({filterItems, updateFilter}) => (
             <>
             <label htmlFor='Filter_select' id='Filter_label'>Filter:</label>
-            <select name='Filter_select' id='Filter_select' onChange={(e) => this.handleChange(e, filterItems)}>
+            <select name='Filter_select' id='Filter_select' onChange={(e) => this.handleChange(e, filterItems, updateFilter)}>
               <option value='all'>All</option>
               <option value='todo'>Status: To Do</option>
               <option value='doing'>Status: Doing</option>

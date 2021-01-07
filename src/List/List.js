@@ -85,7 +85,7 @@ class List extends Component {
         <CasualistContext.Consumer>
           {({updateDisplayItemsOrder}) => (
             <DragDropContext onDragEnd={(result) => this.handleOnDragEnd(result, updateDisplayItemsOrder)}>
-              <Droppable droppableId={this.context.list.id}>
+              <Droppable droppableId={this.context.list.id} isDropDisabled={this.context.currentFilter !== 'all' ? true : false}>
                 {(provided) => (
                   <ul className='List_ul' {...provided.droppableProps} ref={provided.innerRef}>
                     {items}

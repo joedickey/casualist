@@ -14,6 +14,7 @@ class App extends Component {
     allItems: Mock.mockitems,
     displayItems: Mock.mockitems,
     currentItem: {},
+    currentFilter: 'all'
   }
 
   filterItems = (val) => {
@@ -53,8 +54,37 @@ class App extends Component {
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem)
 
+    const newItemOrder = []
+    items.forEach(item => newItemOrder.push(item.id))
+    //API call to update list.item_order with newItemOrder
     this.setState({
+      allItems: items,
       displayItems: items
+    })
+  }
+
+  updateFilter = (val) => { // Used conditionally to only allow drag and drop when all items are displayed
+    this.setState({
+      currentFilter: val
+    })
+  }
+
+  componentDidMount() {
+    //API call to get List and Items
+    const items = Mock.mockitems
+    const list = Mock.mocklist
+    const sortedItems = []
+    for(let i = 0; i < list.item_order.length; i++ ) { // sorting list based on item order (by ID)
+      for(let j = 0; j < items.length; j++){
+        if(list.item_order[i] === items[j].id) {
+          sortedItems.push(items[j])
+        }
+      }
+    }
+
+    this.setState({
+      allItems: sortedItems,
+      displayItems: sortedItems
     })
   }
 
@@ -64,9 +94,11 @@ class App extends Component {
       allItems: this.state.allItems,
       displayItems: this.state.displayItems,
       currentItem: this.state.currentItem,
+      currentFilter: this.state.currentFilter,
       filterItems: this.filterItems,
       updateCurrItem: this.updateCurrItem,
-      updateDisplayItemsOrder: this.updateDisplayItemsOrder
+      updateDisplayItemsOrder: this.updateDisplayItemsOrder,
+      updateFilter: this.updateFilter
     }
 
     return (
