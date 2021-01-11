@@ -10,9 +10,9 @@ class App extends Component {
   static contextType = CasualistContext
 
   state = {
-    list: Mock.mocklist,
-    allItems: Mock.mockitems,
-    displayItems: Mock.mockitems,
+    list: {},
+    allItems: [],
+    displayItems: [],
     currentItem: {},
     currentFilter: 'all'
   }
@@ -69,9 +69,22 @@ class App extends Component {
     })
   }
 
+  loadList = (list) => {
+    this.setState({
+      list: list
+    })
+  }
+
+  loadListItems = (items) => {
+    this.setState({
+      allItems: items,
+      displayItems: items
+    })
+  }
+
   componentDidMount() {
     //API call to get List and Items
-    const items = Mock.mockitems
+    const items = this.state.allItems
     const list = Mock.mocklist
     const sortedItems = []
     for(let i = 0; i < list.item_order.length; i++ ) { // sorting list based on item order (by ID)
@@ -98,7 +111,9 @@ class App extends Component {
       filterItems: this.filterItems,
       updateCurrItem: this.updateCurrItem,
       updateDisplayItemsOrder: this.updateDisplayItemsOrder,
-      updateFilter: this.updateFilter
+      updateFilter: this.updateFilter,
+      loadList: this.loadList,
+      loadListItems: this.loadListItems
     }
 
     return (

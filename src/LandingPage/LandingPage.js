@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './LandingPage.css';
 import CasualistContext from '../CasualistContext'
+import config from '../config'
+import {nanoid} from 'nanoid'
 
 class LandingPage extends Component {
   static contextType = CasualistContext
@@ -12,13 +14,41 @@ class LandingPage extends Component {
   }
 
   state = {
-    linkHidden: true
+    linkHidden: true,
+    activeLink: ''
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
+    const newListName = e.target.listname.value
+    const newListUrl = nanoid(6)
+
+    const newListData = {
+      'url_path': newListUrl,
+      'name': newListName,
+      'item_order': []
+    }
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${config.API_KEY}`
+      },
+      body: JSON.stringify(newListData)
+    }
+    
+    fetch(`${config.API_ENDPOINT}/lists`, requestOptions)
+      .then(res => {
+        if(!res.ok) {
+          throw new Error('Could not create list')
+        }
+        return res.json()
+      })
+      .catch(err => err.message)
+
     this.setState({
-      linkHidden: false
+      linkHidden: false,
+      activeLink: newListUrl
     })
   }
 
@@ -45,9 +75,9 @@ class LandingPage extends Component {
                   <button type='submit' id='listname_submit'>Create List</button>
               </form>
               <div className={`LandingPage_link ${this.state.linkHidden ? 'hidden' : ''}`}> 
-                <a ref={this.linkRef} href={`http://localhost:3000/${this.context.list.id}`}>http://localhost:3000/{this.context.list.id}</a>
+                <a ref={this.linkRef} href={`http://localhost:3000/${this.state.activeLink}`}>http://localhost:3000/{this.state.activeLink}</a>
                 <button className='copylink' onClick={() => this.copyLink()}>Copy Link</button>
-                <input ref={this.linkRef} type='hidden' value={`http://localhost:3000/${this.context.list.id}`} readOnly></input>
+                <input ref={this.linkRef} type='hidden' value={`http://localhost:3000/${this.state.activeLink}`} readOnly></input>
               </div>
           </div>
       </div>
