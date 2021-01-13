@@ -126,15 +126,8 @@ class App extends Component {
 
         this.state.allItems.push(resJson)
 
-        setTimeout(() => {
-          this.setState({ // trigger rerender with new item
-            allItems: this.state.allItems
-          })
-        }, 300)
-        
-
         item_order.push(id)
-
+        
         const patchRequestOptions = {
           ...requestOptions, 
           method: 'PATCH', 
@@ -150,6 +143,12 @@ class App extends Component {
           .catch(err => err.message)
       })
       .catch(err => err.message)
+
+      setTimeout(() => {
+        this.setState({ // trigger rerender with new item
+          allItems: this.state.allItems
+        })
+      }, 400)
     
   }
 

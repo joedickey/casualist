@@ -9,6 +9,14 @@ class EditItem extends Component {
     showAssignInput: false
   }
 
+  checkInitialAssign = (currentItem) => { 
+    if(currentItem.assign === '') {
+      this.setState({
+        showAssignInput: true
+      })
+    }
+  }
+
   handleSelect = (e) => {
     if(e.target.value === 'new'){
       this.setState({
@@ -38,6 +46,11 @@ class EditItem extends Component {
     callback(id, patchData)
 
     this.props.toggleEditItemModal()
+  }
+
+  componentDidMount() {
+    const currentItem = this.context.currentItem[0] 
+    this.checkInitialAssign(currentItem) // if currentItem on load has no assign value it changes state to render conditional Assign input.
   }
 
   render() {

@@ -101,7 +101,8 @@ class List extends Component {
 
         <Modal  /* Pop up Edit List Modal */
           isOpen={this.state.editListModalIsOpen} 
-          style={modalStyles} 
+          style={modalStyles}
+          onRequestClose ={this.toggleEditListModal}
           shouldCloseOnOverlayClick={true}> 
           <EditList toggleEditListModal={this.toggleEditListModal}/>
         </Modal>
@@ -109,15 +110,17 @@ class List extends Component {
         <Modal  /* Pop up Item Detail Modal */
           isOpen={this.state.itemDetailModalIsOpen} 
           style={modalStyles} 
+          onRequestClose ={this.toggleItemDetailModal}
           shouldCloseOnOverlayClick={true}> 
           <ItemDetail 
             toggleEditItemModal={this.toggleEditItemModal} 
             toggleItemDetailModal={this.toggleItemDetailModal} />
         </Modal>
 
-        <Modal  /* Pop up Item Detail Modal */
+        <Modal  /* Pop up Edit Item Modal */
           isOpen={this.state.editItemModalIsOpen} 
           style={modalStyles} 
+          onRequestClose ={this.toggleEditItemModal}
           shouldCloseOnOverlayClick={true}> 
           <EditItem toggleEditItemModal={this.toggleEditItemModal} />
         </Modal>
@@ -125,6 +128,7 @@ class List extends Component {
         <Modal  /* Pop up Add List Item Modal */
           isOpen={this.state.addListItemModalIsOpen} 
           style={modalStyles} 
+          onRequestClose ={this.toggleAddListItemModal}
           shouldCloseOnOverlayClick={true}> 
           <AddListItem toggleAddListItemModal={this.toggleAddListItemModal}/>
         </Modal>
