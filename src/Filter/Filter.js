@@ -27,7 +27,7 @@ class Filter extends Component {
           {({filterItems, updateFilter}) => (
             <>
             <label htmlFor='Filter_select' id='Filter_label'>Filter:</label>
-            <select name='Filter_select' id='Filter_select' onChange={(e) => this.handleChange(e, filterItems, updateFilter)}>
+            <select name='Filter_select' id='Filter_select' value={this.context.currentFilter} defaultChecked onChange={(e) => this.handleChange(e, filterItems, updateFilter)}>
               <option value='all'>All</option>
               <option value='todo'>Status: To Do</option>
               <option value='doing'>Status: Doing</option>

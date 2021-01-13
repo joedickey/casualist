@@ -40,7 +40,6 @@ class ListView extends Component {
       })
       .catch(err => err.message)
     
-
   }
 
   render() {

@@ -10,7 +10,11 @@ const CasualistContext = React.createContext({
     updateDisplayItemsOrder: () => {},
     updateFilter: () => {},
     loadList: () => {},
-    loadListItems: () => {}
+    loadListItems: () => {},
+    addItem: () => {},
+    deleteItem: () => {},
+    patchList: () => {},
+    patchItem: () => {}
 })
 
 export default CasualistContext;
