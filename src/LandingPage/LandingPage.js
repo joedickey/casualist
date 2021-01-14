@@ -75,9 +75,9 @@ class LandingPage extends Component {
                   <button type='submit' id='listname_submit'>Create List</button>
               </form>
               <div className={`LandingPage_link ${this.state.linkHidden ? 'hidden' : ''}`}> 
-                <a ref={this.linkRef} href={`http://localhost:3000/${this.state.activeLink}`}>http://localhost:3000/{this.state.activeLink}</a>
+                <a ref={this.linkRef} href={`https://casualist.vercel.app/${this.state.activeLink}`}>https://casualist.vercel.app/{this.state.activeLink}</a>
                 <button className='copylink' onClick={() => this.copyLink()}>Copy Link</button>
-                <input ref={this.linkRef} type='hidden' value={`http://localhost:3000/${this.state.activeLink}`} readOnly></input>
+                <input ref={this.linkRef} type='hidden' value={`https://casualist.vercel.app/${this.state.activeLink}`} readOnly></input>
               </div>
           </div>
       </div>

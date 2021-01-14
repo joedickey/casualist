@@ -33,9 +33,9 @@ class Header extends Component {
         <div className='Header_controls'>
             <Filter />
             <div className='Header_link'>
-              <a href={`http://localhost:3000/${this.context.list.url_path}`}>http://localhost:3000/{this.context.list.url_path}</a>
+              <a href={`https://casualist.vercel.app/${this.context.list.url_path}`}>https://casualist.vercel.app/{this.context.list.url_path}</a>
               <button className='copylink' onClick={() => this.copyLink()}>Copy Link</button>
-              <input ref={this.linkRef} type='hidden' value={`http://localhost:3000/${this.context.list.url_path}`} readOnly></input>
+              <input ref={this.linkRef} type='hidden' value={`https://casualist.vercel.app/${this.context.list.url_path}`} readOnly></input>
             </div>
         </div>
       </div>

@@ -138,17 +138,19 @@ class App extends Component {
             if(!res.ok) {
               throw new Error('Could not update list item order')
             }
+            setTimeout(() => {
+              this.setState({ // trigger rerender with new item
+                allItems: this.state.allItems
+              })
+            }, 100)
+            
             return res
           })
           .catch(err => err.message)
       })
       .catch(err => err.message)
 
-      setTimeout(() => {
-        this.setState({ // trigger rerender with new item
-          allItems: this.state.allItems
-        })
-      }, 400)
+      
     
   }
 
