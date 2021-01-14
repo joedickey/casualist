@@ -14,7 +14,8 @@ class App extends Component {
     allItems: [],
     displayItems: [],
     currentItem: {},
-    currentFilter: 'all'
+    currentFilter: 'all',
+    triggerRender: false
   }
 
   filterItems = (val) => {
@@ -103,6 +104,12 @@ class App extends Component {
     })
   }
 
+  triggerRender = () => {
+    this.setState({
+      triggerRender: !this.state.triggerRender
+    })
+  }
+
   addItem = (data) => {
     const requestOptions = {
       method: 'POST',
@@ -140,13 +147,17 @@ class App extends Component {
             }
             setTimeout(() => {
               this.setState({ // trigger rerender with new item
-                allItems: this.state.allItems
+                allItems: this.state.allItems,
+                displayItems: this.state.allItems,
+                currentFilter: 'all'
               })
-            }, 100)
+            }, 300)
             
             return res
           })
           .catch(err => err.message)
+
+        this.triggerRender() // safetey to make sure render updates after calls
       })
       .catch(err => err.message)
 
