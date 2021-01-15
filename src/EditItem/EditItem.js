@@ -74,7 +74,9 @@ class EditItem extends Component {
               <label htmlFor='form_assign' className='EditItem_label'>Assigned To:</label>
               <select name='form_assign' id='form_assign' defaultValue={currentItem.assign !== '' ? currentItem.assign : 'new' } onChange={(e) => this.handleSelect(e)}>
                 {assignedOptions}
-                <option value='new'>+ Add New</option>
+                {assignVals.length > 0 ? <option disabled>──────────────────</option> : ''}
+                <option value='new'>Add New</option>
+                <option value=''>No One</option>
               </select>
               <input id='form_assign_input' name='form_assign_input' className={`EditItem_input ${this.state.showAssignInput ? '' : 'hidden'} `} type='text'></input>
               <label htmlFor='form_notes' className='EditItem_label'>Notes:</label>

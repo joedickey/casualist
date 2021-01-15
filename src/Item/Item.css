@@ -1,13 +1,14 @@
 .Item {
-    background-color: white;
+    background-color: #F9F9ED;
     padding: 0px 5px;
-    border: 1px solid black;
     width: 270px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     color: black;
     text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   }
 
 .Item_status {
@@ -28,19 +29,31 @@
   }
   
 .Item_button {
-    margin: 5px;
+    margin: 2px;
+    padding: 0px;
+    border: 0px;
   }
 
+.Item_icons {
+  width: 25px;
+  height: auto;
+  transition: transform .2s;
+}
+
+.Item_icons:hover {
+  transform: scale(1.15)
+}
+
 .Item_todo {
-    background-color: red;
+    background-color: #F28482;
 }
 
 .Item_doing {
-    background-color: yellow;
+    background-color: #ffe66d;
 }
 
 .Item_done {
-    background-color: green;
+    background-color: #9DBE9F;
 }
   
 .hidden {

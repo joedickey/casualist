@@ -32,6 +32,7 @@ class Filter extends Component {
               <option value='todo'>Status: To Do</option>
               <option value='doing'>Status: Doing</option>
               <option value='done'>Status: Done</option>
+              {assignVals.length > 0 ? <option disabled>──────</option> : ''}
               {assignedOptions}
             </select>
             </>

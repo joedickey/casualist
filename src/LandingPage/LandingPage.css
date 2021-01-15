@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #0E161B;
 }
 
 .LandingPage_text {
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +35,13 @@
 
 .copylink {
     margin-top: 5px;
+}
+
+.LandingPage_logo {
+    margin-top: 100px;
+    width: 90%;
+    height: 90%;
+    max-width: 340px;
 }
 
 #listname {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import './Header.css';
 import Filter from '../Filter/Filter'
+import {ReactComponent as HeaderLogo} from '../assets/header_logo.svg'
 import CasualistContext from '../CasualistContext';
 
 class Header extends Component {
@@ -27,13 +28,13 @@ class Header extends Component {
       <div className='Header'>
         <h2>
           <Link className='router_link' to='/'>
-            Casualist
+            <HeaderLogo className='Header_logo'/>
           </Link>
         </h2>
         <div className='Header_controls'>
             <Filter />
             <div className='Header_link'>
-              <a href={`https://casualist.vercel.app/${this.context.list.url_path}`}>https://casualist.vercel.app/{this.context.list.url_path}</a>
+              <a href={`https://casualist.vercel.app/${this.context.list.url_path}`}>casualist.vercel.app/{this.context.list.url_path}</a>
               <button className='copylink' onClick={() => this.copyLink()}>Copy Link</button>
               <input ref={this.linkRef} type='hidden' value={`https://casualist.vercel.app/${this.context.list.url_path}`} readOnly></input>
             </div>
