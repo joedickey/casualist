@@ -4,7 +4,7 @@ Casualist helps you easily and quickly create a dynamic and collaborative checkl
 
 Live Version: <https://casualist.vercel.app/>
 
-![Imgur](https://imgur.com/a/gaISZi9)
+[Imgur](https://i.imgur.com/TbwgPmQ.png)
 
 ## Summary
 
