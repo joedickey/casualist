@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import CasualistContext from '../CasualistContext';
 import './ItemDetail.css';
 import StatusBar from '../StatusBar/StatusBar'
+import { default as editIcon } from '../assets/edit_icon.svg'
+import { default as deleteIcon } from '../assets/delete_icon.svg'
+import { default as closeIcon } from '../assets/close_icon.svg'
 
 class ItemDetail extends Component {
   static contextType = CasualistContext
@@ -33,18 +36,20 @@ class ItemDetail extends Component {
                       <StatusBar status={currentItem.status} item_id={currentItem.id}/> 
                     </div>
                     <div className='ItemDetail_right'>
-                      <button className='ItemDetail_button' onClick={(e) => this.handleDelete(currentItem.id, deleteItem)}>Delete</button>
+                      <button className='ItemDetail_button' onClick={(e) => this.handleDelete(currentItem.id, deleteItem)}>
+                        <img className ='Item_icons'src={deleteIcon} alt='delete'></img>
+                      </button>
                       <button className='ItemDetail_button' onClick={() => this.handleClick()}>
-                        Edit
+                        <img className ='Item_icons'src={editIcon} alt='edit'></img>
                       </button>
                       <button className='ItemDetail_button' onClick={() => this.props.toggleItemDetailModal()}>
-                        Back
+                        <img className ='Item_icons'src={closeIcon} alt='close'></img>
                       </button>
                     </div>
                   </div>
                   <div className='ItemDetail_bottom'>
                     <p className={`${currentItem.notes ? '' : 'hidden'}`}>Notes:</p>
-                    <p>{currentItem.notes}</p>
+                    <p className='ItemDetail_notes'>{currentItem.notes}</p>
                   </div>
                 </div>
               )}

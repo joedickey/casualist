@@ -8,6 +8,7 @@ body {
   background-color: #F9F9ED;
   color: #0E161B;
   text-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
+  letter-spacing: 0.2px;
 }
 
 code {

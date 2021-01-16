@@ -3,3 +3,24 @@
     
 }
 
+button {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    background-color: inherit;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+p {
+    color: #0E161B;
+}
+
+input, textarea, select {
+    border: 1px solid rgb(76, 99, 169, 0.3);
+    font-family: 'Arimo'
+    
+}

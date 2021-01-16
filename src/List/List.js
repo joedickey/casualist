@@ -8,6 +8,8 @@ import EditList from '../EditList/EditList'
 import AddListItem from '../AddListItem/AddListItem'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import EditItem from '../EditItem/EditItem'
+import { default as editIcon } from '../assets/edit_icon.svg'
+import { default as addIcon } from '../assets/add_icon.svg'
 
 class List extends Component {
   static contextType = CasualistContext
@@ -60,8 +62,12 @@ class List extends Component {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-      }
+      },
     }
+
+    Modal.defaultStyles.content.padding = '0px'
+    Modal.defaultStyles.content.border = 'none'
+
 
     const items = this.context.displayItems.map((item, index) => {
       return <Item 
@@ -77,10 +83,12 @@ class List extends Component {
 
     return (
       <div className='List'>
-        <h3>{this.context.list.name}</h3>
-        <button onClick={() => this.toggleEditListModal()}>
-          Edit List Name
-        </button>
+        <div className='List_title'>
+          <h3 id='list_title'>{this.context.list.name}</h3>
+          <button id='edit_list' onClick={() => this.toggleEditListModal()}>
+            <img className ='Item_icons'src={editIcon} alt='edit'></img>
+          </button>
+        </div>
         <CasualistContext.Consumer>
           {({updateDisplayItemsOrder}) => (
             <DragDropContext onDragEnd={(result) => this.handleOnDragEnd(result, updateDisplayItemsOrder)}>
@@ -96,13 +104,14 @@ class List extends Component {
           )}
         </CasualistContext.Consumer>
         <button onClick={() => this.toggleAddListItemModal()}>
-          + Add List Item
+          <img className ='Item_icons'src={addIcon} alt='add'></img>
         </button>
 
         <Modal  /* Pop up Edit List Modal */
           isOpen={this.state.editListModalIsOpen} 
           style={modalStyles}
           onRequestClose ={this.toggleEditListModal}
+          closeTimeoutMS={50}
           shouldCloseOnOverlayClick={true}> 
           <EditList toggleEditListModal={this.toggleEditListModal}/>
         </Modal>
@@ -111,6 +120,7 @@ class List extends Component {
           isOpen={this.state.itemDetailModalIsOpen} 
           style={modalStyles} 
           onRequestClose ={this.toggleItemDetailModal}
+          closeTimeoutMS={50}
           shouldCloseOnOverlayClick={true}> 
           <ItemDetail 
             toggleEditItemModal={this.toggleEditItemModal} 
@@ -121,6 +131,7 @@ class List extends Component {
           isOpen={this.state.editItemModalIsOpen} 
           style={modalStyles} 
           onRequestClose ={this.toggleEditItemModal}
+          closeTimeoutMS={50}
           shouldCloseOnOverlayClick={true}> 
           <EditItem toggleEditItemModal={this.toggleEditItemModal} />
         </Modal>
@@ -129,6 +140,7 @@ class List extends Component {
           isOpen={this.state.addListItemModalIsOpen} 
           style={modalStyles} 
           onRequestClose ={this.toggleAddListItemModal}
+          closeTimeoutMS={50}
           shouldCloseOnOverlayClick={true}> 
           <AddListItem toggleAddListItemModal={this.toggleAddListItemModal}/>
         </Modal>

@@ -40,3 +40,7 @@ a {
 a:hover {
     color: #B9C2DF;
 }
+
+#link_icon {
+    margin-top: 2.5px;
+}

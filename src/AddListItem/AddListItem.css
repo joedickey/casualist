@@ -2,30 +2,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    background-color: #4C63A9;;
     width: 300px;
     padding-bottom: 18.7px;
     border-radius: 4px;
+    background-color: #4C63A9;
     color: #0E161B;
     text-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
   }
   
   .AddListItem_form {
     background-color: #F9F9ED;
-    padding: 0px 5px;
+    border-radius: 4px;
+    color: #0E161B;
+    padding: 10px 5px 0px 5px;
     width: 270px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    color: black;
     text-decoration: none;
   }
   
   .AddListItem_bottom {
     display: flex;
     justify-content: center;
-    margin: 10px 0px;
   }
   
   .AddListItem_button {
@@ -34,6 +33,17 @@
   
   .AddListItem_label {
     margin: 5px 0px;
+  }
+
+  .SubmitCancel_icons {
+    width: auto;
+    height: 15px;
+    transition: transform .2s;
+    margin: 10px;
+  }
+
+  .SubmitCancel_icons:hover {
+    transform: scale(1.15)
   }
   
   #form_notes {

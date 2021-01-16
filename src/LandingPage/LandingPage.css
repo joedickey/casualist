@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #0E161B;
+    color: #4C63A9;
 }
 
 .LandingPage_text {
@@ -38,20 +38,27 @@
 }
 
 .LandingPage_logo {
-    margin-top: 100px;
+    margin-top: 30px;
     width: 90%;
     height: 90%;
-    max-width: 340px;
+    max-width: 275px;
 }
 
 #listname {
     width: 200px;
 }
 
-#listname_submit {
-    width: 208px;
-    margin-top: 5px;
+#intro {
+    text-align: justify;
+    margin-top: 0px;
+    width: 275px;
 }
+
+h2 {
+    width: 300px;
+}
+
+
 
 
 

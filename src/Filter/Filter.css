@@ -1,10 +1,15 @@
 .Filter {
     font-size: smaller;
+    overflow-wrap: break-word;
 }
 
 .Filter_empty {
     font-size: smaller;
     opacity: 0;
+}
+
+#Filter_select {
+    max-width: 132px;
 }
 
 #Filter_label {

@@ -17,9 +17,9 @@ class StatusBar extends Component {
       <CasualistContext.Consumer>
         {({patchItem}) => (
           <div className='StatusBar'>
-            <div className={`StatusBar_tog ${this.props.status === 'todo' ? 'Item_todo' : ''}`} id='todo' onClick={(e) => this.handleClick(e, patchItem)}>To Do</div>
-            <div className={`StatusBar_tog ${this.props.status === 'doing' ? 'Item_doing' : ''}`} id='doing' onClick={(e) => this.handleClick(e, patchItem)}>Doing</div>
-            <div className={`StatusBar_tog ${this.props.status === 'done' ? 'Item_done' : ''}`} id='done' onClick={(e) => this.handleClick(e, patchItem)}>Done</div>
+            <button className={`StatusBar_tog ${this.props.status === 'todo' ? 'Item_todo' : ''}`} id='todo' onClick={(e) => this.handleClick(e, patchItem)}>To Do</button>
+            <button className={`StatusBar_tog ${this.props.status === 'doing' ? 'Item_doing' : ''}`} id='doing' onClick={(e) => this.handleClick(e, patchItem)}>Doing</button>
+            <button className={`StatusBar_tog ${this.props.status === 'done' ? 'Item_done' : ''}`} id='done' onClick={(e) => this.handleClick(e, patchItem)}>Done</button>
           </div>
         )}
       </CasualistContext.Consumer>

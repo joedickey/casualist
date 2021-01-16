@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CasualistContext from '../CasualistContext';
 import './AddListItem.css';
+import { default as submitIcon } from '../assets/submit_icon.svg'
+import { default as cancelIcon } from '../assets/cancel_icon.svg'
 
 class AddListItem extends Component {
   static contextType = CasualistContext
@@ -63,10 +65,10 @@ class AddListItem extends Component {
               <textarea id='form_notes' name='form_notes' className='AddListItem_input' type='text' placeholder=''></textarea>
               <div className='AddListItem_bottom'>
                 <button  type='submit' className='AddListItem_button'>
-                  Submit
+                  <img className ='SubmitCancel_icons'src={submitIcon} alt='submit'></img>
                 </button>
                 <button type='button' className='AddListItem_button' onClick={() => this.props.toggleAddListItemModal()} >
-                    Cancel
+                  <img className ='SubmitCancel_icons'src={cancelIcon} alt='cancel'></img>
                 </button>
               </div>
             </form>

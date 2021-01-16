@@ -4,6 +4,7 @@ import CasualistContext from '../CasualistContext'
 import config from '../config'
 import {nanoid} from 'nanoid'
 import {ReactComponent as CasualistLogo} from '../assets/logo.svg'
+import { default as submitIcon } from '../assets/submit_icon.svg'
 
 class LandingPage extends Component {
   static contextType = CasualistContext
@@ -65,13 +66,15 @@ class LandingPage extends Component {
         <CasualistLogo className='LandingPage_logo'/>
         <div className='LandingPage_text'>
           <h2>The fast-casual checklist maker.</h2>
-          <p>Casualist helps you easily and quickly create a dynamic and collaborative checklist.  Simply enter a title below and hit 'Create List' then allow others to view, edit, and contribute by sharing your unique list URL. No sign-up or login needed. No wasted time.</p>
+          <p id='intro'>Casualist helps you easily and quickly create a dynamic and collaborative checklist.  Simply submit a title below then allow others to view, edit, and contribute by sharing your unique list URL. No sign-up or login needed. No wasted time.</p>
         </div>
         <div className='LandingPage_create'>
             <form className='LandingPage_form' onSubmit={(e) => this.handleSubmit(e)}>
-                <label htmlFor='listname' className='LandingPage_label'>Start a New List</label>
+                <label htmlFor='listname' className='LandingPage_label'>CREATE LIST</label>
                 <input type='text' name='listname' id='listname' className='LandingPage_listname' placeholder='Enter new list title.' required/>
-                <button type='submit' id='listname_submit'>Create List</button>
+                <button type='submit' id='listname_submit'>
+                  <img className ='SubmitCancel_icons'src={submitIcon} alt='submit'></img>
+                </button>
             </form>
         </div>
       </div>

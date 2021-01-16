@@ -13,7 +13,7 @@ class Item extends Component {
 
   handleClick = (e, id, callback) => {
     callback(id)
-    e.target.value === 'edit' ? this.props.toggleEditItemModal() : this.props.toggleItemDetailModal()
+    e.target.alt === 'edit' ? this.props.toggleEditItemModal() : this.props.toggleItemDetailModal()
     
   }
 
@@ -34,15 +34,15 @@ class Item extends Component {
                   <StatusBar status={this.props.status} item_id={this.props.id}/>             
                 </div>
                 <div className='Item_right' >
-                  <div className='Item_button' onClick={(e) => this.handleDelete(this.props.id, deleteItem)}>
+                  <button className='Item_button' onClick={(e) => this.handleDelete(this.props.id, deleteItem)}>
                     <img className ='Item_icons'src={deleteIcon} alt='delete'></img>
-                  </div>
-                  <div className='Item_button' value='edit' onClick={(e) => this.handleClick(e, this.props.id, updateCurrItem)}>
+                  </button>
+                  <button className='Item_button' value='edit' onClick={(e) => this.handleClick(e, this.props.id, updateCurrItem)}>
                     <img className ='Item_icons'src={editIcon} alt='edit'></img>
-                  </div>
-                  <div className='Item_button' value='details' onClick={(e) => this.handleClick(e, this.props.id, updateCurrItem)}>
+                  </button>
+                  <button className='Item_button' value='details' onClick={(e) => this.handleClick(e, this.props.id, updateCurrItem)}>
                     <img className ='Item_icons'src={detailIcon} alt='detail'></img>
-                  </div>
+                  </button>
                 </div>
               </div>
           )}
