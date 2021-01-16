@@ -19,7 +19,6 @@ Available endpoints include:
 * /lists
 * /lists/:url_path
 * /listitems/:list_id
-* /listitems/:list_id
 * /items
 * /items/:item_id
 
