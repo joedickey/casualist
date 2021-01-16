@@ -35,6 +35,7 @@ Supported HTTP methods:
 ### Front End
 * React
 * Javascript ES6
+* Context API
 * react-modal
 * react-beautiful-dnd
 * JSX
