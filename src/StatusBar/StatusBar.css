@@ -1,20 +1,20 @@
 .StatusBar {
-    display: flex;
-    align-items: flex-start;
-    margin: 16px 0px;
-  }
+  display: flex;
+  align-items: flex-start;
+  margin: 16px 0px;
+}
 
 .StatusBar_tog {
-    font-size: smaller;
-    padding: 3px;
-    margin: 0px 0px 5px 0px;
-    border: 1px solid black;
-    border-right: none;
-  }
+  font-size: smaller;
+  padding: 3px;
+  margin: 0px 0px 5px 0px;
+  border: 1px solid black;
+  border-right: none;
+}
   
 .StatusBar_tog:last-child {
-    border-right: 1px solid black;
-  }
+  border-right: 1px solid black;
+}
 
 .StatusBar_tog:hover {
   cursor: pointer;

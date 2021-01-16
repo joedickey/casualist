@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Casualist: The fast-casual checklist maker.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Casualist helps you easily and quickly create a dynamic and collaborative checklist. 
 
-## Available Scripts
+Live Version: <https://casualist.vercel.app/>
 
-In the project directory, you can run:
+![Imgur](https://i.imgur.com/tnTWY7f.png)
+![Imgur](https://i.imgur.com/7yF0231.png)
 
-### `npm start`
+## Summary
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Casualist helps users easily and quickly create a dynamic and collaborative checklist.  Simply submit a title on the landing page to generate a new list. This list will have a unique URL path that can then be shared with any collaborators. Users can add, delete, and edit items as well as filter the list by status or asssignee. When displaying all items on the list a user can utilize drag and drop to reorganize tasks. No sign-up or login needed. No wasted time.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## API
 
-### `npm test`
+The API repo for this app is located here: <https://github.com/joedickey/casualist-api>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Available endpoints include:
+* /lists
+* /lists/:url_path
+* /listitems/:list_id
+* /items
+* /items/:item_id
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Supported HTTP methods:
+* GET
+* POST
+* PATCH
+* DELETE
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technology Used
 
-### `npm run eject`
+### Front End
+* React
+* Javascript ES6
+* Context API
+* react-modal
+* react-beautiful-dnd
+* JSX
+* HTML5
+* CSS3
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Testing
+* Jest
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Production
+* Vercel

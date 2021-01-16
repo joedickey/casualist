@@ -10,44 +10,44 @@
     text-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
   }
   
-  .AddListItem_form {
-    background-color: #F9F9ED;
-    border-radius: 4px;
-    color: #0E161B;
-    padding: 10px 5px 0px 5px;
-    width: 270px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-  }
-  
-  .AddListItem_bottom {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .AddListItem_button {
-    margin: 5px;
-  }
-  
-  .AddListItem_label {
-    margin: 5px 0px;
-  }
+.AddListItem_form {
+  background-color: #F9F9ED;
+  border-radius: 4px;
+  color: #0E161B;
+  padding: 10px 5px 0px 5px;
+  width: 270px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
 
-  .SubmitCancel_icons {
-    width: auto;
-    height: 15px;
-    transition: transform .2s;
-    margin: 10px;
-  }
+.AddListItem_bottom {
+  display: flex;
+  justify-content: center;
+}
 
-  .SubmitCancel_icons:hover {
-    transform: scale(1.15)
-  }
-  
-  #form_notes {
-    height: 75px;
-  }
+.AddListItem_button {
+  margin: 5px;
+}
+
+.AddListItem_label {
+  margin: 5px 0px;
+}
+
+.SubmitCancel_icons {
+  width: auto;
+  height: 15px;
+  transition: transform .2s;
+  margin: 10px;
+}
+
+.SubmitCancel_icons:hover {
+  transform: scale(1.15)
+}
+
+#form_notes {
+  height: 75px;
+}
   
   

@@ -13,7 +13,7 @@ button {
 button:focus {
     outline: none;
     box-shadow: none;
-  }
+}
 
 p {
     color: #0E161B;

@@ -1,49 +1,49 @@
 .EditList {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    padding-bottom: 18.7px;
-    border-radius: 4px;
-    background-color: #4C63A9;
-    color: #0E161B;
-    text-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
-  }
-  
-  .EditList_form {
-    background-color: #F9F9ED;
-    border-radius: 4px;
-    color: #0E161B;
-    padding: 0px 5px;
-    width: 270px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-  }
-  
-  .EditList_top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-  }
-  
-  .EditList_bottom {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .EditList_button {
-    margin: 5px;
-  }
-  
-  .EditList_label {
-    margin: 5px 0px;
-  }
-  
-  .EditList_input {
-    width: 150px;
-    margin-left: 5px;
-    margin-top: 2.5px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding-bottom: 18.7px;
+  border-radius: 4px;
+  background-color: #4C63A9;
+  color: #0E161B;
+  text-shadow: 0px 3px 15px rgba(0,0,0, 0.1);
+}
+
+.EditList_form {
+  background-color: #F9F9ED;
+  border-radius: 4px;
+  color: #0E161B;
+  padding: 0px 5px;
+  width: 270px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.EditList_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.EditList_bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.EditList_button {
+  margin: 5px;
+}
+
+.EditList_label {
+  margin: 5px 0px;
+}
+
+.EditList_input {
+  width: 150px;
+  margin-left: 5px;
+  margin-top: 2.5px;
+}

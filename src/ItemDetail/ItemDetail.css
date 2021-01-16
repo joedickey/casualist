@@ -32,34 +32,34 @@
 }
   
 .ItemDetail_right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .ItemDetail_left {
-    max-width: 230px;
+max-width: 230px;
 }
 
 .ItemDetail_bottom {
-    align-self: flex-start;
-  }
+  align-self: flex-start;
+}
   
 .ItemDetail_button {
-    margin: 5px;
-  }
+  margin: 5px;
+}
 
 .ItemDetail_todo {
-    background-color: red;
+  background-color: red;
 }
 
 .ItemDetail_doing {
-    background-color: yellow;
+  background-color: yellow;
 }
 
-.ItemDetail_done {
-    background-color: green;
+.ItemDetail_done {  
+  background-color: green;
 }
 
 .ItemDetail_notes {
