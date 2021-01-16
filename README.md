@@ -5,11 +5,11 @@ Casualist helps you easily and quickly create a dynamic and collaborative checkl
 Live Version: <https://casualist.vercel.app/>
 
 ![Imgur](https://i.imgur.com/TbwgPmQ.png)
+![Imgur](https://i.imgur.com/1lxqX0a.png)
 
 ## Summary
 
-Casualist helps you easily and quickly create a dynamic and collaborative checklist.  Simply submit a title below then allow others to view, edit, and contribute by sharing your unique list URL. No sign-up or login needed. No wasted time.
-
+Casualist helps users easily and quickly create a dynamic and collaborative checklist.  Simply submit a title on the landing page to generate a new list. This list will have a unique URL path that can then be shared with any collaborators. Users can add, delete, and edit items as well as filter the list by status or asssignee. When displaying all items on the list a user can utilize drag and drop to reorganize tasks. No sign-up or login needed. No wasted time.
 
 ## API
 
