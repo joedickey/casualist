@@ -64,4 +64,11 @@
 .hidden {
     display: none;
 }
+
+@media all and (min-width: 800px) {
+  .Item {
+    width: 470px;
+  }
+  
+}
   

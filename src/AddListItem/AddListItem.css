@@ -49,5 +49,22 @@
 #form_notes {
   height: 75px;
 }
+
+/* For Desktop and Tablet */
+
+@media all and (min-width: 800px) {
+  
+  .SubmitCancel_icons {
+    width: auto;
+    height: 20px;
+    transition: transform .2s;
+    margin: 10px;
+  }
+
+  input {
+    height: 20px;
+  }
+
+}
   
   

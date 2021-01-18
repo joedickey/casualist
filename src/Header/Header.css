@@ -44,3 +44,34 @@ a:hover {
 #link_icon {
     margin-top: 2.5px;
 }
+
+/* For Desktop and Tablet */
+
+@media all and (min-width: 800px) {
+    .Header {
+        padding: 15px 10px;
+
+    }
+
+    .Header_logo {
+        max-width: 200px;
+    }
+
+    .Header_controls {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .Header_link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    #link_icon {
+        margin-left: 10px;
+    }
+
+}

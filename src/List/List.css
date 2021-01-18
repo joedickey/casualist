@@ -49,3 +49,21 @@
 }
 
 
+/* For Desktop and Tablet */
+
+@media all and (min-width: 800px) {
+  .List {
+    margin-top: 40px;
+    width: 500px;
+    padding: 20px;
+  }
+
+  .List_title {
+    width: 480px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+}

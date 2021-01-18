@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import Mock from '../mock.js'
+import Mock from '../mock.js';
 import CasualistContext from '../CasualistContext';
 
 
@@ -17,15 +17,15 @@ it('renders without crashing', () => {
         displayItems: Mock.mockitems,
         currentItem: Mock.mockitems,
         currentFilter: 'all'
-    }
+    };
 
 
     ReactDOM.render(
-    <CasualistContext.Provider value={value}>
-        <Router>
-            <ItemDetail />
-        </Router>
-    </CasualistContext.Provider>, div);
+        <CasualistContext.Provider value={value}>
+            <Router>
+                <ItemDetail />
+            </Router>
+        </CasualistContext.Provider>, div);
     
     ReactDOM.unmountComponentAtNode(div);
 });

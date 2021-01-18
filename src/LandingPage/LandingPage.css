@@ -59,8 +59,39 @@ h2 {
 }
 
 
+/* For Desktop and Tablet */
 
+@media all and (min-width: 800px) {
+    .LandingPage_logo {
+        margin-top: 50px;
+        width: 90%;
+        height: 90%;
+        max-width: 500px;
+    }
 
+    .LandingPage_label {
+        font-weight: bold;
+        margin: 10px 0px;
+        font-size: 20px;
+    }
+    
+    #listname {
+        width: 300px;
+    }
+    
+    #intro {
+        text-align: justify;
+        margin-top: 0px;
+        width: 500px;
+    }
+    
+    h2 {
+        width: 500px;
+    }
 
+    p {
+        font-size: 20px;
+    }
+  }
 
 

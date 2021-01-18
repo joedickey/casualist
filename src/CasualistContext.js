@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const CasualistContext = React.createContext({
     list: {},
@@ -14,7 +14,7 @@ const CasualistContext = React.createContext({
     addItem: () => {},
     deleteItem: () => {},
     patchList: () => {},
-    patchItem: () => {}
-})
+    patchItem: () => {},
+});
 
 export default CasualistContext;

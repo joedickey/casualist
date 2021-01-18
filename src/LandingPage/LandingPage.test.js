@@ -11,9 +11,9 @@ it('renders without crashing', () => {
 
 
     ReactDOM.render(
-    <Router>
-        <LandingPage />
-    </Router>, div);
+        <Router>
+            <LandingPage />
+        </Router>, div);
     
     ReactDOM.unmountComponentAtNode(div);
 });
