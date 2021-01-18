@@ -47,7 +47,7 @@ a:hover {
 
 /* For Desktop and Tablet */
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 750px) {
     .Header {
         padding: 15px 10px;
 

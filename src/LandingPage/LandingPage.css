@@ -61,7 +61,7 @@ h2 {
 
 /* For Desktop and Tablet */
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 750px) {
     .LandingPage_logo {
         margin-top: 50px;
         width: 90%;
