@@ -20,15 +20,16 @@
 
 @media all and (min-width: 800px) {
     .Filter {
-        margin-bottom: -10px;
-        margin-right: 20px;
+        margin: 8px 12px -5px 20px;
     }
 
     #Filter_select {
         font-size: 20px;
+        max-width: 400px;
     }
     
     #Filter_label {
         font-size: 20px;
+        margin-right: 10px;
     }
 }
