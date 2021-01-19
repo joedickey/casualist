@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './Header.css';
 import Filter from '../Filter/Filter';
-import {ReactComponent as HeaderLogo} from '../assets/header_logo.svg';
+import headerLogo from '../assets/header_logo.svg';
 import { default as linkIcon } from '../assets/link_icon.svg';
 import CasualistContext from '../CasualistContext';
 
@@ -28,11 +28,9 @@ class Header extends Component {
 
       return (
           <div className='Header'>
-              <h2>
-                  <Link className='router_link' to='/'>
-                      <HeaderLogo className='Header_logo'/>
-                  </Link>
-              </h2>
+              <Link className='router_link' to='/'>
+                  <img className='Header_logo' src={headerLogo} alt='header_logo' />
+              </Link>   
               <div className='Header_controls'>
                   <Filter />
                   <div className='Header_link'>
@@ -40,7 +38,7 @@ class Header extends Component {
                       <button onClick={() => this.copyLink()}>
                           <img id='link_icon' className ='Item_icons'src={linkIcon} alt='copy_link'></img>
                       </button>
-                      <input ref={this.linkRef} type='hidden' value={`https://casualist.vercel.app/${this.context.list.url_path}`} readOnly></input>
+                      <input ref={this.linkRef} type='hidden' value={`https://casualist.vercel.app/${this.context.list.url_path}`}></input>
                   </div>
               </div>
           </div>

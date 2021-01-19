@@ -5,6 +5,7 @@ import CasualistContext from './CasualistContext';
 import LandingPage from './LandingPage/LandingPage';
 import ListView from './ListView/ListView';
 import config from './config';
+import Mock from './mock';
 
 class App extends Component {
   static contextType = CasualistContext

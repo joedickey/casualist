@@ -24,30 +24,32 @@ class Item extends Component {
   render() {
       return (
           <Draggable draggableId={this.props.id.toString()} index={this.props.index}>
-              {(provided) => (
-                  <CasualistContext.Consumer>
-                      {({updateCurrItem, deleteItem}) => (
-                          <div className='Item' ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} >
-                              <div className='Item_left' >
-                                  <h4>{this.props.item_name}</h4>
-                                  <p className={`${this.props.assigned ? '' : 'hidden'}`}>Assigned to: {this.props.assigned}</p>
-                                  <StatusBar status={this.props.status} item_id={this.props.id}/>             
-                              </div>
-                              <div className='Item_right' >
-                                  <button className='Item_button' onClick={(e) => this.handleDelete(this.props.id, deleteItem)}>
-                                      <img className ='Item_icons'src={deleteIcon} alt='delete'></img>
-                                  </button>
-                                  <button className='Item_button' value='edit' onClick={(e) => this.handleClick(e, this.props.id, updateCurrItem)}>
-                                      <img className ='Item_icons'src={editIcon} alt='edit'></img>
-                                  </button>
-                                  <button className='Item_button' value='details' onClick={(e) => this.handleClick(e, this.props.id, updateCurrItem)}>
-                                      <img className ='Item_icons'src={detailIcon} alt='detail'></img>
-                                  </button>
-                              </div>
-                          </div>
-                      )}
-                  </CasualistContext.Consumer>
-              )}
+              {(provided) => { 
+                  delete provided.dragHandleProps.role; 
+                  return ( 
+                      <CasualistContext.Consumer>
+                          {({updateCurrItem, deleteItem}) => (
+                              <li className='Item' ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} key={this.props.id} >
+                                  <div className='Item_left' >
+                                      <h4>{this.props.item_name}</h4>
+                                      <p className={`${this.props.assigned ? '' : 'hidden'}`}>Assigned to: {this.props.assigned}</p>
+                                      <StatusBar status={this.props.status} item_id={this.props.id}/>             
+                                  </div>
+                                  <div className='Item_right' >
+                                      <button className='Item_button' onClick={(e) => this.handleDelete(this.props.id, deleteItem)}>
+                                          <img className ='Item_icons' src={deleteIcon} alt='delete'></img>
+                                      </button>
+                                      <button className='Item_button' value='edit' onClick={(e) => this.handleClick(e, this.props.id, updateCurrItem)}>
+                                          <img className ='Item_icons' src={editIcon} alt='edit'></img>
+                                      </button>
+                                      <button className='Item_button' value='details' onClick={(e) => this.handleClick(e, this.props.id, updateCurrItem)}>
+                                          <img className ='Item_icons' src={detailIcon} alt='detail'></img>
+                                      </button>
+                                  </div>
+                              </li>
+                          )}
+                      </CasualistContext.Consumer>
+                  );}}
           </Draggable>
       );
   }

@@ -24,6 +24,7 @@
 .Header_logo {
     height: 100%;
     width: 100%;
+    align-self: center;
     min-width: 115px;
     max-width: 150px;
     transition: transform .2s;
