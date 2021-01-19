@@ -13,15 +13,29 @@ class Header extends Component {
   constructor(props) {
       super(props);
 
+      this.state = {
+          toastVisible: false
+      };
+
       this.linkRef = React.createRef();
   }
 
   copyLink = (e) => {
+      this.setState({
+          toastVisible: true
+      });
+
       this.linkRef.current.type = 'text';
       this.linkRef.current.focus();
       this.linkRef.current.select();
       document.execCommand('copy');
       this.linkRef.current.type = 'hidden';
+
+      setTimeout(() => {
+          this.setState({
+              toastVisible: false
+          });
+      }, 1000);
   }
 
   render() {
@@ -31,6 +45,9 @@ class Header extends Component {
               <Link className='router_link' to='/'>
                   <img className='Header_logo' src={headerLogo} alt='header_logo' />
               </Link>   
+              <div className={`Header_toast ${this.state.toastVisible ? 'toast_visible' : ''}`}> 
+                Link Copied.
+              </div>
               <div className='Header_controls'>
                   <Filter />
                   <div className='Header_link'>
